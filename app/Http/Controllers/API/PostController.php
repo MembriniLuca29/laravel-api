@@ -19,6 +19,8 @@ class PostController extends Controller
             'results' => $posts
         ]);
     }
+   
+
     public function show( string $slug)
     {
         $posts = Post::where('slug', $slug)->firstOrFail();
@@ -27,4 +29,7 @@ class PostController extends Controller
             'results' => $posts
         ]);
     }
+
 }
+
+
